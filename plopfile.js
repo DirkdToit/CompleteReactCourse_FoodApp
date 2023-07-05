@@ -12,12 +12,17 @@ module.exports = function(plop) {
         name: 'directory',
         message: 'Enter the Directory destination after src:',
       },
+      {
+        type: 'input',
+        name: 'fileType',
+        message: 'Type of file? (api/js):',
+      },
     ],
     actions: [
       {
         type: 'add',
         path: 'src/{{directory}}/{{name}}.js',
-        templateFile: 'plopTemplates/js-file-template.hbs',
+        templateFile: 'plopTemplates/{{fileType}}-file-template.hbs',
       },
     ],
   });
