@@ -27,8 +27,7 @@ const SearchScreen = () => {
                 onSearhTermSubmit={() => {searchApi(searchTerm)}}
             />
             {errorMessage ? <Text>{errorMessage}</Text> : null}
-            <Text>We have found {results.length} results</Text>
-            <ScrollView>
+            <ScrollView style={{ flex: 1}}>
                 <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"/>
                 <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier"/>
                 <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender!"/>
